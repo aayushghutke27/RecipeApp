@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "649001868860",
+    "project_id": "recipeapp-db2da",
+    "storage_bucket": "recipeapp-db2da.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649001868860:android:1c8261e02e501e131f2d39",
+        "android_client_info": {
+          "package_name": "com.example.recipeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649001868860-4njd8hsl52l15nq3fkfhl1qiu884bgj4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABM05PyiePQXjk_8ey99qCABq3mHoivL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649001868860-4njd8hsl52l15nq3fkfhl1qiu884bgj4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

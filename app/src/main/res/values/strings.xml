@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RecipeApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signup_link"><u>Sign Up</u></string>
+    <string name="login"><u>Login</u></string>
+    <string name="web_client_id">649001868860-4njd8hsl52l15nq3fkfhl1qiu884bgj4.apps.googleusercontent.com</string>
+
+
+</resources>

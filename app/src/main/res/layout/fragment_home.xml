@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiant_color"
+    tools:context=".HomeFragment"
+    android:paddingTop="?attr/actionBarSize"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfile"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_circle"
+                android:src="@drawable/img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/userProfileInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/userProfile"
+                app:layout_constraintStart_toEndOf="@id/userProfile"
+                app:layout_constraintTop_toTopOf="@id/userProfile">
+
+                <TextView
+                    android:id="@+id/greetingMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Good Morning"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Ayush Ghutke"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/notification"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_circle"
+                android:padding="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/notification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/greetingTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:lineSpacingExtra="2dp"
+            android:text="Feeling Hungry?\nWhat we are cooking today?"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/search_bar"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:hintEnabled="false"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/search_edit"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:hint="Search any recipe"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <HorizontalScrollView
+            android:id="@+id/recipeFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+            
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="false"
+                    app:singleLine="true"
+                    android:paddingHorizontal="8dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_seeAll"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:minHeight="56dp"
+                        android:text="See all"
+                        android:textColor="@color/chip_text_selector"
+                        android:textSize="16sp"
+                        app:chipBackgroundColor="@color/chip_selector"
+                        app:chipEndPadding="16dp"
+                        app:chipStartPadding="16dp"
+                        app:chipStrokeColor="@color/colorPrimary"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/soup"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:minHeight="56dp"
+                        android:text="Soup"
+                        android:textColor="@color/chip_text_selector"
+                        android:textSize="16sp"
+                        app:chipBackgroundColor="@color/chip_selector"
+                        app:chipEndPadding="16dp"
+                        app:chipStartPadding="16dp"
+                        app:chipStrokeColor="@color/colorPrimary"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/salad"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:text="Salad"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        app:chipStrokeColor="@color/colorPrimary"
+                        app:chipStrokeWidth="1dp"
+                        app:chipBackgroundColor="@color/chip_selector"
+                        android:textColor="@color/chip_text_selector"
+                        android:minHeight="56dp"
+                        app:chipStartPadding="16dp"
+                        app:chipEndPadding="16dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/breakfast"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:minHeight="56dp"
+                        android:text="Breakfast"
+                        android:textColor="@color/chip_text_selector"
+                        android:textSize="16sp"
+                        app:chipBackgroundColor="@color/chip_selector"
+                        app:chipEndPadding="16dp"
+                        app:chipStartPadding="16dp"
+                        app:chipStrokeColor="@color/colorPrimary"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/lunch"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:minHeight="56dp"
+                        android:text="Lunch"
+                        android:textColor="@color/chip_text_selector"
+                        android:textSize="16sp"
+                        app:chipBackgroundColor="@color/chip_selector"
+                        app:chipEndPadding="16dp"
+                        app:chipStartPadding="16dp"
+                        app:chipStrokeColor="@color/colorPrimary"
+                        app:chipStrokeWidth="1dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/dinner"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:text="Dinner"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        app:chipStrokeColor="@color/colorPrimary"
+                        app:chipStrokeWidth="1dp"
+                        app:chipBackgroundColor="@color/chip_selector"
+                        android:textColor="@color/chip_text_selector"
+                        android:minHeight="56dp"
+                        app:chipStartPadding="16dp"
+                        app:chipEndPadding="16dp" />
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+            
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/recommendationTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recommended Recipe"
+            android:textSize="20sp"
+            android:layout_marginTop="24dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecommendation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_recipe_card"
+            />
+
+        <TextView
+            android:id="@+id/tvRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recipe of the week"
+            android:textSize="20sp"
+            android:layout_marginTop="24dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecipeOfWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="8dp"
+            tools:listitem="@layout/item_card_recipe_week"/>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

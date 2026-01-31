@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyBottomSheetTheme" parent="Theme.Material3.Light.BottomSheetDialog">
+
+        <!-- Keep system bars white -->
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+
+        <!-- Use dark icons on system bars -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+
+    </style>
+</resources>

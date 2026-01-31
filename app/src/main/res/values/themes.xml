@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RecipeApp" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        
+<!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+<!--        <item name="android:navigationBarColor">@android:color/transparent</item>-->
+
+<!--        <item name="android:windowLightStatusBar">false</item>-->
+<!--        <item name="android:windowLightNavigationBar">false</item>-->
+
+<!--        <item name="android:windowTranslucentStatus">false</item>-->
+<!--        <item name="android:windowTranslucentNavigation">false</item>-->
+
+
+
+        <item name="android:forceDarkAllowed">false</item>
+
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.RecipeApp" parent="Base.Theme.RecipeApp" />
+
+    <style name="Theme.RecipeApp.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@drawable/ic_logo
+        </item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="31">@color/white
+        </item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.RecipeApp</item>
+    </style>
+
+    <style name="RecipeImageRound">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeBottomLeft">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+    </style>
+
+    <style name="MyBottomSheetTheme" parent="Theme.Material3.Light.BottomSheetDialog">
+
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+
+
+    </style>
+
+</resources>
