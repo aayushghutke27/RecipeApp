@@ -166,10 +166,9 @@ Authenticates users via **Email & Password** or **Google Sign-In**.
 - Snackbar error messages for failed attempts
 
 **Flow:**
-```
-Enter Email & Password → Real-time Validation → Firebase Auth → Navigate to MainActivity
-                                                             ↘ Switch to Sign Up
-```
+
+<img src="https://github.com/user-attachments/assets/c72beb02-e4e4-4659-aef6-858fa27c211b" width="200"/>
+
 
 ---
 
