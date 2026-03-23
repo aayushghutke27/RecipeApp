@@ -151,6 +151,46 @@ RecipeApp/
 
 ---
 
+**Flow:**
+```
+Splash Screen
+      ↓
+Authentication (Login / Sign Up)
+      ↓
+MainActivity (Bottom Navigation)
+      ↓
+
+🏠 Home
+ ┌─────────────┬─────────────┬─────────────┬─────────────┐
+ ↓             ↓             ↓             ↓
+💾 Save       📂 Saved       🔍 Search     👤 Profile
+ ↓             ↓             ↓             ↓
+
+(Store in     Saved        Search       User Info /
+ Room DB)     Screen       Results      Settings
+              ↓
+        🔀 Switcher View
+              ↓
+   ┌──────────┴──────────┐
+   ↓                     ↓
+
+💾 Saved Recipes        ☁️ My Recipes
+(Room Database)         (Firestore)
+   ↓                       ↓
+
+📋 Recipe List        ┌───────────────┐
+(Offline Access)      ↓               ↓
+                 ➕ Add Recipe     📋 Recipe List
+                      ↓               ↓
+               Firestore (Cloud)      ↓
+                      ↓               ↓
+               🔄 Auto Sync Updates ──┘
+                      ↓
+
+               📖 Recipe Detail
+
+---
+```
 ## 📱 Screens
 
 ### 🔑 Login Screen (`LoginFragment`)
@@ -165,13 +205,9 @@ Authenticates users via **Email & Password** or **Google Sign-In**.
 - Loading indicator during authentication
 - Snackbar error messages for failed attempts
 
-**Flow:**
-
-<img src="https://github.com/user-attachments/assets/c72beb02-e4e4-4659-aef6-858fa27c211b" width="200"/>
-
-
 ---
-
+```
+```
 ### 📝 Sign Up Screen (`SignUpFragment`)
 
 Creates new user accounts with enforced password rules.
@@ -181,11 +217,6 @@ Creates new user accounts with enforced password rules.
 - At least one uppercase letter
 - At least one number
 - Confirm password must match
-
-**Flow:**
-```
-Enter Email + Password + Confirm Password → Validate → Firebase Create User → Navigate to Login
-```
 
 ---
 
