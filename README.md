@@ -204,10 +204,8 @@ Authenticates users via **Email & Password** or **Google Sign-In**.
 - Google Sign-In via OAuth 2.0
 - Loading indicator during authentication
 - Snackbar error messages for failed attempts
-
 ---
-```
-```
+
 ### 📝 Sign Up Screen (`SignUpFragment`)
 
 Creates new user accounts with enforced password rules.
